@@ -1,12 +1,6 @@
 # Result Managnement 
 A Result Managnement Web App website. Provide interaction Between Student and teacher
 
-
-ShopKaro Backend build using  ExpressJs ,NodeJs,Jwt Token
-<br>
-ShopKaro Fronted build using AngularJs,Boostrap
-<br>
-
 ![](github_assets/banner.png)
 
 ## How to build and run this project
