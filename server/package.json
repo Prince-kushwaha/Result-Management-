@@ -1,0 +1,22 @@
+{
+  "name": "resultmanagement",
+  "version": "1.0.0",
+  "description": "Result Management Servicer",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "lowdb": "^6.0.1",
+    "nanoid": "^4.0.2",
+    "nodemon": "^2.0.22"
+  }
+}

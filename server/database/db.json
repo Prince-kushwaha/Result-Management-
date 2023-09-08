@@ -1,0 +1,43 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "email": "kushwahaprince418@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": 2,
+      "email": "kushwahaprince419@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": 1,
+      "email": "kushwahaprince2002@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": 1,
+      "email": "kushwahaprince2002@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": 1,
+      "email": "kushwahaprince2002@gmail.com",
+      "password": "123456789"
+    }
+  ],
+  "results": [
+    {
+      "RollNumber": "1901610100144",
+      "Name": "Prince kushwaha",
+      "DateOfBirth": "2002-07-14",
+      "Score": "900"
+    },
+    {
+      "RollNumber": "10",
+      "Name": "Suraj",
+      "DateOfBirth": "2023-05-14",
+      "Score": "900"
+    }
+  ]
+}

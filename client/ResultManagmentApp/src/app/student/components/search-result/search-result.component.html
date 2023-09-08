@@ -1,0 +1,36 @@
+<div *ngIf="!isLoading"  class="container">
+    <div *ngIf="errorMsg!=undefined" class="alert alert-danger" role="alert">
+        {{errorMsg}}
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="text-center">Find Result</h5>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group mb-3">
+                    <label class="form-label">Roll Number</label>
+                    <input formControlName="RollNumber" type="text" class="form-control" name="RollNumber">
+                    <span class="text-danger"
+                        *ngIf="!this.form.get('RollNumber')?.valid && this.form.get('RollNumber')?.touched ">
+                        Please enter Roll Number
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">Date of Birth</label>
+                    <input formControlName="DateOfBirth" type="date" class="form-control" name="password" />
+                    <span class="text-danger"
+                        *ngIf="!this.form.get('DateOfBirth')?.valid && this.form.get('DateOfBirth')?.touched ">
+                        Please Enter Date of Birth
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="flex justify-content-center">
+                        <button type="submit" class="btn btn-primary m-3" [disabled]="!this.form?.valid">Search</button>
+                        <button type="button" (click)="formCleanUp()" class="btn btn-primary m-3">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

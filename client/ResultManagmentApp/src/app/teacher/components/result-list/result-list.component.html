@@ -1,0 +1,41 @@
+<div *ngIf="isLoading==false" class="container">
+    <div class="d-flex justify-content-end">
+        <button  (click)="AddRecord()" class="btn btn-primary">Add Record</button>
+    </div>
+    <div class="mt-3 md-3">
+        <h6>Total {{results.length}} students</h6>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Roll No.
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        DateOfBirth
+                    </th>
+                    <th>
+                        Score
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let result of results">
+                    <td>{{result.RollNumber}}</td>
+                    <td>{{result.Name}}</td>
+                    <td>{{result.DateOfBirth}}</td>
+                    <td>{{result.Score}}</td>
+                    <div class="d-flex justify-content-start">
+                        <button  (click)="EditRecord(result.RollNumber)" class="btn btn-primary btn-action">Edit</button>
+                        <button (click)="DeleteRecord(result.RollNumber)" class="btn btn-primary btn-action">Delete</button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

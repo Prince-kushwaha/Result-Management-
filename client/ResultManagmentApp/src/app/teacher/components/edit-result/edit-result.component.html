@@ -1,0 +1,49 @@
+<div style="max-width: 800px;" class="container mb-3">
+    <div *ngIf="errorMsg!=undefined" class="alert alert-danger" role="alert">
+        {{errorMsg}}
+    </div>
+    <div *ngIf="!isLoading" class="card">
+        <div class="card-header">
+            <h6 class="text-center">Update Result</h6>
+        </div>
+        <form [formGroup]="resultForm">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Roll No.</label>
+                    <input formControlName="RollNumber" class="form-control" type="text" />
+                    <span class="text-danger"
+                        *ngIf="!resultForm.get('RollNumber')?.valid && resultForm.get('RollNumber')?.touched">
+                        Please Enter Roll Number
+                    </span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input formControlName="Name" class="form-control" type="text" />
+                    <span class="text-danger" *ngIf="!resultForm.get('Name')?.valid && resultForm.get('Name')?.touched">
+                        Please Enter Name
+                    </span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Date of Birth</label>
+                    <input formControlName="DateOfBirth" class="form-control" type="date" />
+                    <span class="text-danger"
+                        *ngIf="!resultForm.get('DateOfBirth')?.valid && resultForm.get('DateOfBirth')?.touched">
+                        Please Enter Date of Birth
+                    </span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Score</label>
+                    <input formControlName="Score" class="form-control" type="text" />
+                    <span class="text-danger"
+                        *ngIf="!resultForm.get('Score')?.valid && resultForm.get('Score')?.touched">
+                        Please Enter Roll Number
+                    </span>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <input [disabled]="!resultForm.valid" (click)="UpdateRecord()" class="d-block btn btn-primary"
+                        type="submit" value="Update Record" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div *ngIf="!isLoading" style="max-width: 500px;" class="container">
+    <div *ngIf="errorMsg!=undefined" class="alert alert-danger" role="alert">
+        {{errorMsg}}
+      </div>      
+    <div class="card">
+        <div class="card-header">
+            <h5 class="text-center">Teacher Login</h5>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="TeacherLoginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input formControlName="Email" type="email" class="form-control" name="email">
+                    <span class="text-danger" *ngIf="!TeacherLoginForm.get('Email')?.valid && TeacherLoginForm.get('Email')?.touched">
+                        Please Enter Email
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">Password</label>
+                    <input formControlName="Password" type="password" class="form-control" name="password" />
+                    <span class="text-danger" *ngIf="!TeacherLoginForm.get('Password')?.valid && TeacherLoginForm.get('Password')?.touched">
+                        Please Enter Password
+                    </span>
+                </div>
+                <div class="form-group mb-3">
+                    <input [disabled]="!TeacherLoginForm?.valid" class="d-block m-auto btn btn-primary" type="submit" value="Login" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

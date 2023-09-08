@@ -1,0 +1,28 @@
+<div *ngIf="!isLoading" class="container">
+    <div *ngIf="errorMsg!=undefined" class="alert alert-danger" role="alert">
+        {{errorMsg}}
+    </div>
+    <div *ngIf="errorMsg==undefined" class="card">
+        <div class="card-header">
+            <h5 class="text-center">Result</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <h6 class="col-6">Roll No :</h6>
+                <h6 class="col-auto">{{result.RollNumber}}</h6>
+            </div>
+            <div class="row">
+                <h6 class="col-6">Name :</h6>
+                <h6 class="col-auto">{{result.Name}}</h6>
+            </div>
+            <div class="row">
+                <h6 class="col-6">Date of Birth:</h6>
+                <h6 class="col-auto">{{result.DateOfBirth}}</h6>
+            </div>
+            <div class="row">
+                <h6 class="col-6">Score:</h6>
+                <h6 class="col-auto">{{result.Score}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
